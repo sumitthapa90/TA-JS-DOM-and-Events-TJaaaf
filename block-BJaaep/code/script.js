@@ -2,22 +2,24 @@ let boxes = document.querySelectorAll(".box");
 
 boxes.forEach((el) => {
   el.addEventListener("click", (e) => {
-    const num = Math.ceil(Math.random() * 12);
+    const num = Math.floor(Math.random() * 12);
     el.innerText = num;
 
     setTimeout(() => {
       el.innerText = "";
-    }, 5000);
+    }, 3000);
   });
 });
 
-let boxes2 = document.querySelector(".boxes-2");
+let boxes2 = document.querySelector(".box");
 
-boxes2.addEventListener("click", (event) => {
-  if (event.target.classList.contains("box")) {
-    event.target.innerText = Math.ceil(Math.random() * 12);
-    setTimeout(() => {
-      event.target.innerText = "";
-    }, 3000);
+boxes.addEventListener("click" , (event)=> {
+  if(event.target.classList.contains("box")){
+    event.target.innerText = Math.floor(Math.random() * 12)
   }
-});
+  setTimeout(() => {
+    event.innerText = ""
+  }, 3000);
+})
+
+

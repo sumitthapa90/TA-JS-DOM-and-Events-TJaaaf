@@ -8,23 +8,25 @@ function generateRandomNumber() {
   return randomNumber;
 }
 
+let parentDiv = document.querySelector(".boxes");
+
 for (let i = 0; i < 500; i++) {
   let div = document.createElement("div");
   div.classList.add("box");
-  let container = document.querySelector(".container");
-  container.append(div);
-
-  div.innerText = generateRandomNumber();
+  let h3 = document.createElement("h3");
+  let randomNumber = generateRandomNumber(500);
+  h3.innerText = randomNumber;
+  div.append(h3);
+  parentDiv.append(div);
 }
-let container = document.querySelector(".container");
 
-container.addEventListener("mousemove", () => {
-  let boxes = document.querySelectorAll(".box");
+let allBoxes = document.querySelectorAll(".box");
 
-  for (box of boxes) {
+parentDiv.addEventListener("mousemove", mouseMove);
+
+function mouseMove() {
+  allBoxes.forEach((box) => {
     box.style.backgroundColor = generateRandomColor();
-    box.innerText = generateRandomNumber();
-  }
-});
-
-
+    box.children[0].innerText = generateRandomNumber();
+  });
+}

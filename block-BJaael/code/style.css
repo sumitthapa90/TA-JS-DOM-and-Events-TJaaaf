@@ -34,22 +34,23 @@ img {
   height: auto;
 }
 
-/* css */
+/* my css */
 
 body {
-  text-align: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
   align-items: center;
-  
 }
 .container {
-  width: 800px;
-  height: 700px;
+  width:700px;
+}
+
+.boxes {
   display: flex;
   flex-wrap: wrap;
-  
 }
+
 .box {
   width: 4rem;
   height: 4rem;

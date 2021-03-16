@@ -136,33 +136,25 @@ table {
   font-weight: normal;
 }
 
-h1{
-    text-align: center;
-    font-size: 4rem;
-    margin-bottom: 5rem;
-    margin-top: 2rem;
-}
-input {
-  padding: 15px 30px;
-  margin: 10px;
-  background-color: black;
-  color: white;
-  font-size: 20px;
-  border-radius: 5px;
-  border: none;
+h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 2rem;
 }
 
+input {
+  padding: 2.7rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border: 2px solid gray;
+}
 button {
-  font-weight: 600;
-  width: 4.4rem;
-  height: 3rem;
-  padding: 10px 15px;
-  margin: 5px 5px;
-  border-radius: 10px;
-  background-color: black;
-  color: white;
-  border: none;
+  width: 7.8rem;
+  height: 5rem;
+  font-size: 2rem;
+  border: 2px solid gray;
 }
 button:hover {
-  background-color: olive;
+  background-color: black;
+  color: white;
 }

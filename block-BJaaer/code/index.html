@@ -4,12 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
     <title>Handeling Forms 👇</title>
   </head>
   <body>
@@ -35,7 +29,7 @@
         </div>
         <div class="form-control">
           <label for="movies">What do you love?</label>
-          <select id="choice" name="choice">
+          <select id="gender" name="gender">
             <option value="movies">Movies</option>
             <option value="series">Series</option>
             <option value="others">Others</option>
@@ -44,23 +38,11 @@
 
         <div class="form-control">
           <label for="color">Choose a color</label>
-          <input
-            id="color"
-            type="color"
-            name="color"
-            placeholder="Enter your email"
-          />
+          <input id="color" type="color" name="color" />
         </div>
         <div class="form-control">
           <label for="range"> Rate the movie Inception out of 10 </label>
-          <input
-            id="range"
-            type="range"
-            max="10"
-            step="1"
-            name="range"
-            placeholder="Enter your email"
-          />
+          <input id="range" type="range" max="10" step="1" name="range" />
         </div>
         <div class="form-control">
           <label>Book genre you love?</label>
@@ -97,19 +79,22 @@
         </div>
         <button type="submit">Submit</button>
       </form>
-      <div class="modal">
-        <div class="cancel-btn"><i class="fas fa-times"></i></div>
-        <div>Hello<span class="display-name display-val"></span></div>
-        <div>Email:<span class="display-email display-val"></span></div>
-        <div>You Love:<span class="display-choice display-val"></span></div>
-        <div>Color:<span class="display-color display-val"></span></div>
-        <div>Rating:<span class="display-range display-val"></span></div>
-        <div>Book Genre:<span class="display-drone display-val"></span></div>
-        <div>
-          <span class="display-terms"></span>
+      <div class="overlay close">
+        <div class="container">
+          <a href="#" class="click">Click</a>
+          <div>
+            <h2>Hello Sumit</h2>
+            <p>Email: <span>sumitthapa90@gamil.com</span></p>
+            <p>You Love: <span>Movies</span></p>
+            <p>color: <span>#ffffff</span></p>
+            <p>Rating: <span>8</span></p>
+            <p>Book Genre: Fiction <span>#fffff</span></p>
+            <p>You agree to Terms and Condition</p>
+          </div>
         </div>
       </div>
     </div>
+
     <script src="./script.js"></script>
   </body>
 </html>

@@ -35,3 +35,58 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+/* my css */
+
+body {
+  background: url(./65d15608addb4356d7d824f4f9b1d009.jpg);
+}
+
+.container {
+  background-color: black;
+  width: 350px;
+
+  border: 1px solid white;
+
+  margin: auto;
+  padding: 2.3rem;
+  color: white;
+}
+h1 {
+  margin-bottom: 2rem;
+}
+
+input {
+  padding: 10px 3rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: gray;
+}
+
+.btn {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0.4rem 7.3rem;
+  background-color: grey;
+  color: white;
+}
+input:required{
+border: 1px solid yellowgreen;
+}
+
+input:valid{
+  border: 1px solid green
+}
+
+input:invalid{
+  border: 1px solid red;
+}
+label{
+  margin-top: 1rem;
+}
+.sucess{
+  border: 1px sold green;
+}
+.error{
+  border: 1px sold red;
+}

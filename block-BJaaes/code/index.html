@@ -7,7 +7,86 @@
     <title>Form Validation 👇</title>
   </head>
   <body>
-   
+    <main class="container">
+      <header>
+        <h1>Create Account</h1>
+      </header>
+
+      <form>
+        <div class="form-Control">
+          <label for="text">Username</label><br />
+          <input
+            type="text"
+            name="username"
+            placeholder=""
+            required
+            minlength="4"
+            maxlength="10"
+          />
+
+          <small> </small>
+        </div>
+
+        <div class="form-Control sucess">
+          <label for="text">Name</label><br />
+          <input
+            type="text"
+            name="name"
+            placeholder=""
+            required
+            minlength="6"
+            maxlength="15"
+          />
+          <small> Name cant not be empty</small>
+        </div>
+
+        <div class="form-Control error">
+          <label for="text">Email</label><br />
+          <input
+            type="email"
+            name="email"
+            id="text"
+            placeholder=""
+            required="@"
+            minlength="6"
+          />
+          <small>Email cant be empty</small>
+        </div>
+
+        <div class="form-Control">
+          <label for="number">Number</label><br />
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder=""
+            required
+            min="7"
+          />
+          <small></small>
+        </div>
+
+        <div class="form-Control">
+          <label for="text">password</label><br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder=""
+            required
+          />
+          <small></small>
+        </div>
+
+        <div class="form-Control">
+          <label for="text">Confirm password</label><br />
+          <input type="password" name="password" placeholder="" required />
+        </div>
+
+        <button class="btn">Submit</button>
+      </form>
+    </main>
+
     <script src="./script.js"></script>
   </body>
 </html>

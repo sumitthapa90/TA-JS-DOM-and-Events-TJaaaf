@@ -14,43 +14,27 @@
 
       <form>
         <div class="form-Control">
-          <label for="text">Username</label><br />
+          <label for="username">Username</label><br />
           <input
+            id="username"
             type="text"
             name="username"
-            placeholder=""
-            required
-            minlength="4"
-            maxlength="10"
+            placeholder="Enter your username"
           />
 
-          <small> </small>
+          <small></small>
         </div>
 
         <div class="form-Control sucess">
-          <label for="text">Name</label><br />
-          <input
-            type="text"
-            name="name"
-            placeholder=""
-            required
-            minlength="6"
-            maxlength="15"
-          />
-          <small> Name cant not be empty</small>
+          <label for="name">Name</label><br />
+          <input type="text" name="name" placeholder="Your name" />
+          <small></small>
         </div>
 
         <div class="form-Control error">
-          <label for="text">Email</label><br />
-          <input
-            type="email"
-            name="email"
-            id="text"
-            placeholder=""
-            required="@"
-            minlength="6"
-          />
-          <small>Email cant be empty</small>
+          <label for="email">Email</label><br />
+          <input type="email" name="email" id="text" placeholder="Your Email" />
+          <small></small>
         </div>
 
         <div class="form-Control">
@@ -59,28 +43,29 @@
             type="number"
             name="number"
             id="number"
-            placeholder=""
-            required
-            min="7"
+            placeholder="Phone Number"
           />
           <small></small>
         </div>
 
         <div class="form-Control">
-          <label for="text">password</label><br />
+          <label for="password">Password</label><br />
           <input
             type="password"
             name="password"
             id="password"
-            placeholder=""
-            required
+            placeholder="Password"
           />
           <small></small>
         </div>
 
         <div class="form-Control">
-          <label for="text">Confirm password</label><br />
-          <input type="password" name="password" placeholder="" required />
+          <label for="password-check">Confirm password</label><br />
+          <input
+            type="password"
+            name="password-check"
+            placeholder="Confirm Password"
+          />
         </div>
 
         <button class="btn">Submit</button>

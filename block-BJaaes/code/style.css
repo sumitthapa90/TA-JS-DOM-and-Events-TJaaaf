@@ -60,7 +60,7 @@ input {
   padding: 10px 3rem;
   margin-top: 10px;
   margin-bottom: 10px;
-  background-color: gray;
+  background-color: rgb(207, 198, 198);
 }
 
 .btn {
@@ -70,23 +70,25 @@ input {
   background-color: grey;
   color: white;
 }
-input:required{
-border: 1px solid yellowgreen;
+
+input:required {
+  border: 1px solid yellowgreen;
 }
 
-input:valid{
-  border: 1px solid green
+/* input:valid {
+  border: 1px solid green;
 }
 
-input:invalid{
+input:invalid {
   border: 1px solid red;
-}
-label{
+} */
+
+label {
   margin-top: 1rem;
 }
-.sucess{
-  border: 1px sold green;
+/* .sucess {
+  border: 1px solid green;
 }
-.error{
-  border: 1px sold red;
-}
+.error {
+  border: 1px solid red;
+} */

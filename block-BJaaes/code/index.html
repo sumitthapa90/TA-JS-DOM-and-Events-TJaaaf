@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form Validation 👇</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Create Account</h1>
+      </header>
+
+      <form>
+        <div class="form-Control">
+          <label for="username">Username</label><br />
+          <input
+            id="username"
+            type="text"
+            name="username"
+            placeholder="Enter your username"
+          />
+
+          <small></small>
+        </div>
+
+        <div class="form-Control sucess">
+          <label for="name">Name</label><br />
+          <input type="text" name="name" placeholder="Your name" />
+          <small></small>
+        </div>
+
+        <div class="form-Control error">
+          <label for="email">Email</label><br />
+          <input type="email" name="email" id="text" placeholder="Your Email" />
+          <small></small>
+        </div>
+
+        <div class="form-Control">
+          <label for="number">Number</label><br />
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder="Phone Number"
+          />
+          <small></small>
+        </div>
+
+        <div class="form-Control">
+          <label for="password">Password</label><br />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Password"
+          />
+          <small></small>
+        </div>
+
+        <div class="form-Control">
+          <label for="password-check">Confirm password</label><br />
+          <input
+            type="password"
+            name="password-check"
+            placeholder="Confirm Password"
+          />
+        </div>
+
+        <button class="btn">Submit</button>
+      </form>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

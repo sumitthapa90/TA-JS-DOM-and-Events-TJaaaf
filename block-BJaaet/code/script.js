@@ -10,8 +10,11 @@ function handleApp(event) {
       isDone: false,
     };
     allMovieList.push(movieList);
+    console.log(movieList, "ML");
     event.target.value = "";
     for (random of allMovieList) {
+      console.log(allMovieList);
+      console.log(random);
       createUI(random);
     }
   }
@@ -25,7 +28,8 @@ function handleDelete(event) {
 
 function handleToggle(event) {
   let id = event.target.dataset.id;
-  allMovieList[id] = !allMovieList[id].isDone;
+  allMovieList[id].isDone = !allMovieList[id].isDone;
+  console.log(allMovieList);
   createUI(allMovieList, root);
 }
 
@@ -55,7 +59,5 @@ function createUI(movieList) {
 }
 
 inputText.addEventListener("keyup", handleApp);
-console.log(createUI());
-createUI(allMovieList, root);
-
-
+// console.log(createUI(allMovieList));
+createUI(allMovieList);

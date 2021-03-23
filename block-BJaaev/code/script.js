@@ -1,35 +1,35 @@
 let input = document.querySelector(`input[type= "text"]`);
 let rootElm = document.querySelector(".movie-list");
 
-let allTodos = [];
+let allTodo = JSON.parse(localStorage.getItem("todo")) || [];
 
 input.addEventListener("keyup", (event) => {
-  if (event.keyCode === 13) {
-    allTodos.push({
+  if (event.keyCode === 13 && event.target.value) {
+    allTodo.push({
       name: event.target.value,
       isDone: false,
     });
-    createUI();
+    createUI(allTodo);
     event.target.value = "";
   }
-  localStorage.setItem("todo", JSON.stringify(allTodos));
+  localStorage.setItem("todo", JSON.stringify(allTodo));
 });
 
 function handleDelete() {
   let id = event.target.dataset.id;
-  allTodos.slice(id, 1);
-  localStorage.setItem("todo", JSON.stringify(allTodos));
-  createUI();
+  allTodos.splice(id, 1);
+  localStorage.setItem("todo", JSON.stringify(allTodo));
+  createUI(allTodos);
 }
 
 function handleChange(event) {
   let id = event.target.id;
-  allTodos[id].isDone = !allTodos[id].isDone;
-  localStorage.setItem("todo", JSON.stringify(allTodos));
-  createUI();
+  allTodo[id].isDone = !allTodo[id].isDone;
+  localStorage.setItem("todo", JSON.stringify(allTodo));
+  createUI(allTodo);
 }
 
-function createUI() {
+function createUI(allTodos) {
   rootElm.innerText = "";
   allTodos.forEach((todo, i) => {
     let li = document.createElement("li");
@@ -54,4 +54,36 @@ function createUI() {
   });
 }
 
-createUI();
+let all = document.querySelector(".all");
+let active = document.querySelector(".active");
+let complete = document.querySelector(".complete");
+let clear = document.querySelector(".clear");
+
+all.addEventListener("click", displayAll);
+
+function displayAll() {
+  createUI(allTodo);
+}
+
+active.addEventListener("click", displayActive);
+
+function displayActive() {
+  createUI(allTodo.filter((a) => a.isDone));
+}
+
+complete.addEventListener("click", displayeComplete);
+
+function displayeComplete() {
+  createUI(allTodo.filter((a) => !a.isDone));
+}
+
+clear.addEventListener("click", clearAll);
+
+function clearAll() {
+  allTodo = allTodo.filter((a) => !a.isDone);
+  localStorage.setItem("todo", JSON.stringify(allTodo));
+  createUI(allTodo);
+}
+
+
+createUI(allTodo);

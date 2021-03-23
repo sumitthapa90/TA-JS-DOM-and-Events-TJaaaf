@@ -131,31 +131,35 @@ table {
 /* my css */
 
 body {
-  background-image: url(./image.jpg);
+  background-image: url(./ed.jpg);
+  object-fit: cover;
+}
+
+.flex {
+  display: flex;
 }
 .container {
   width: 400px;
-  height: 400px;
+  height: 650px;
   border: 1px solid black;
   padding: 1rem;
   margin: 0 auto;
-  margin-top: 7rem;
-  background-color: lawngreen;
-  opacity: 0.6;
+
+  background-color: rgb(191, 191, 230);
+  opacity: 0.8;
 }
 h1 {
   font-size: 3rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   text-align: center;
-  font-family: 'Syne Mono', monospace;
+  font-family: "Syne Mono", monospace;
 }
 
 input {
   margin-bottom: 1rem;
   padding: 1rem;
-  margin-left: 1.5rem;
-  font-family: 'Syne Mono', monospace;
+  font-family: "Syne Mono", monospace;
 
   font-size: 1.5rem;
 }
@@ -163,11 +167,30 @@ input {
 label {
   margin-left: 1.5rem;
   font-size: 1.5rem;
-  font-family: 'Syne Mono', monospace;
+  font-family: "Syne Mono", monospace;
 }
 span {
   margin-left: 1.5rem;
   font-size: 1.5rem;
-  font-family: 'Syne Mono', monospace;
+  font-family: "Syne Mono", monospace;
   color: red;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.footer-btns li {
+  padding: 0.5rem;
+  background-color: gainsboro;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+.form-control {
+  display: block;
+}
+.align-center {
+  align-items: center;
 }
